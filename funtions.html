@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 400px;
+    }
+    .contenedor{
+        background-color: aqua;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        border: 2px solid orange;
+    }
+    input{
+        border-radius: 5px;
+        border: 3px solid black;
+    }
+    label{
+        margin-bottom: 5px;
+    }
+
+
+
+</style>
+
+<body>
+
+    <div class="contenedor">
+        <label for="">Numero menor</label>
+        <input type="text" id="menor">
+        <br>
+
+        <label for="">Numero mayor</label>
+        <input type="text" id="mayor">
+        <br>
+        <button onclick="paresYimpares()">CALCULAR:</button>
+        <p id="numero"></p>
+        <p id="numero2"></p>
+
+
+    </div>
+
+    <script>
+        function paresYimpares() {
+            var menor = document.getElementById("menor");
+            var mayor = document.getElementById("mayor");
+            var mensaje = document.getElementById("numero");
+            var mensaje1 = document.getElementById("numero2");
+            if (menor.value > mayor.value) {
+                alert("debe ingresar un numero menor");
+                menor.focus();
+
+            }
+            if (menor.value === mayor.value) {
+                alert("son iguales");
+                return;
+            }
+            let diferencia = mayor.value - menor.value;
+            if (diferencia >= 20) {
+                alert("no es un rango valido");
+                return;
+
+            }
+            if (isNaN(menor.value) || isNaN(mayor.value)) {
+                alert("no son numeros");
+
+
+            }
+
+
+            for (let i = menor.value; i <= mayor.value; i++) {
+                mensaje.innerHTML += i;
+                if (i % 2 == 0) {
+                    mensaje1.innerText += " es par " + i;
+
+                } else {
+                    mensaje1.innerText += " es impar " + i;
+                }
+            }
+
+            // for (let i = menor.value; i <= mayor.value; i++) {
+            //     mensaje.innerHTML += i;
+
+            //     if (i % 2 === 0) {
+            //         mensaje1.innerHTML += " es par " + i + "<br>";
+            //     } else {
+            //         mensaje1.innerHTML += " es impar " + i + "<br>";
+            //     }
+            // }
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

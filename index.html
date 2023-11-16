@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <label for="">Numero:</label>
+        <input type="text" id="numeros">
+        <button onclick=" calcularCantidad()">CALCULAR</button>
+        <br>
+
+        <label for="">cantidad</label>
+        <input type="text" id="numero1">
+        <br>
+        <label for="">suma</label>
+        <input type="text" id="numero2">
+        <br>
+        <label for="">resta</label>
+        <input type="text" id="numero3">
+        <br>
+        <label for="">multiplicacion</label>
+        <input type="text" id="numero4">
+        <br>
+        <label for="">promedio</label>
+        <input type="text" id="numero5">
+        <br>
+        <label for="">felicidades</label>
+        <input type="text" id="numero6">
+        <br>
+
+
+
+
+    </div>
+
+    <script>
+             //var total = numeroInput.value.length;
+        function calcularCantidad(){
+            
+            var numeroInput = document.getElementById("numeros");
+            document.getElementById("numeros").disabled = false;
+            if (isNaN(numeroInput.value)) {
+                
+               
+                var bool = false;
+                alert("no es numero");
+                numeroInput.focus();
+            } else {
+                alert("es numero");
+                bool = true;
+            }
+
+            if(numeroInput.value.length<=2){
+                
+            }else{
+                alert("no se tiene en cuenta");
+            }
+
+
+           
+         
+               
+
+            // }
+            var cantidad = document.getElementById("numero1");
+            var suma = document.getElementById("numero2");
+            var resta = document.getElementById("numero3");
+            var multiplicacion = document.getElementById("numero4");
+            var promedio = document.getElementById("numero5");
+            var feli = document.getElementById("numero6");
+        
+
+            
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
