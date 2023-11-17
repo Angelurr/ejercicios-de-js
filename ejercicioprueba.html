@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            
+            display: flex;
+            align-items: center;
+
+            justify-content: center;
+
+            height: 100vh;
+            
+
+        }
+        .hijo{
+        
+        flex-direction: column;
+        height: 100px;
+        width: 200px;
+        background-color: aquamarine;
+        border-radius: 5px;
+        }
+        .result{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+   <div class="container">
+    <div class="hijo">
+        <label for="">numero</label>
+        <input type="text" id="num">
+        <button onclick="calcular()">calcular</button>
+        <div class="result">result: </div>
+    </div>
+    
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        function calcular() {
+            var numero = document.getElementById("num");
+            if (numero.value > 5) {
+      
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "You clicked the button!",
+                        icon: "success"
+                    });
+                    return;
+
+                }
+
+        }
+    </script>
+
+</body>
+
+</html>

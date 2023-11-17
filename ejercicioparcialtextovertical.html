@@ -33,8 +33,21 @@
             let caja = document.getElementById("caja").value;
             let resultado = document.getElementById("result");
             let vector= "";
-            if(caja===""){
-                alert("la caja esta vacia");
+            if(vector===""){
+                Swal.fire({
+                    icon: 'warning',
+                    tittle: "ingrese algo",
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+                return;
+
+
+
+
+                //alert("la caja esta vacia");
+
+
 
             }else{
             if(isNaN(caja)){
