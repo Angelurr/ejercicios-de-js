@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <label for="">numero 1</label>
+        <input type="text" id="num1">
+        <label for="">numero 2</label>
+        <input type="text" id="num2">
+        <button ondblclick="calcularnumeros()">CALCULAR</button>
+        <p id="numero"></p>
+
+    </div>
+
+
+
+
+    <script>
+
+        function calcularnumeros() {
+            // var num1 = document.getElementById("num1");
+            // var num2 = document.getElementById("num2");
+            // var mensaje = document.getElementById("numero");
+
+            // for (let i = num1.value; i <= num2.value; i+=2) {
+            //     mensaje.innerHTML += i;
+            // }
+
+            // var num1 = document.getElementById("num1");
+            // var num2 = document.getElementById("num2");
+            // var mensaje = document.getElementById("numero");
+
+            // // Parsear los valores como números
+            // var valorNum1 = parseInt(num1.value);
+            // var valorNum2 = parseInt(num2.value);
+
+            // // Verificar si los valores son números válidos
+
+            // // Limpiar el contenido anterior del elemento mensaje
+            // // mensaje.innerHTML = "";
+
+            // // Calcular y mostrar los números en el rango
+            // for (let i = valorNum1; i <= valorNum2; i += 2) {
+            //     mensaje.innerHTML += i + " ";
+            // }
+
+            console.log("sirve");
+            var numeroMin = parseInt(document.getElementById("num1").value);
+            var numeroMax = parseInt(document.getElementById("num2").value);
+            var mensaje = document.getElementById("numero");
+            var variable = document.getElementById("num1").value;
+            var variable1 = document.getElementById("num2").value;
+            if(isNaN(numeroMin) || isNaN(numeroMax)){
+                    alert("no es numero");
+                }else{
+                    alert("es numero");
+                }
+
+                if(variable === ""){
+                    alert("esta vacio");
+
+                }
+                if(variable1 === ""){
+                    alert("esta vacio");
+
+                }
+                console.log(numeroMin);
+            
+            for (let i = numeroMin; i <= numeroMax; i += 2) {
+                mensaje.innerHTML += i + " " + "<br>";
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

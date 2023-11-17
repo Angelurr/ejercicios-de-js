@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+
+<body>
+    <label for="">numero</label>
+    <input type="text" id="num" autofocus placeholder="ingrese numero">
+    <button onclick="calcular1()">calcular</button>
+    <p id="mensaje"></p>
+    <p id="mensaje1"></p>
+
+
+
+    <script>
+        function calcular1() {
+            var numero = document.getElementById("num");
+            var mensaje = document.getElementById("mensaje");
+            var mensaje1 = document.getElementById("mensaje1");
+            if (numero.value > 5) {
+                //document.body.style.backgroundColor = "red";
+                numero.style.border = "5px solid red";
+                alert("es mayor a 5");
+
+            }
+
+
+            var fib = [0, 1];
+            for (let i = 2; i <= numero.value; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+                if (fib[i] % 2 == 0) {
+                    mensaje1.innerHTML += "es par " + fib[i];
+
+                } else {
+                    mensaje1.innerHTML += "es impar " + fib[i];
+                }
+
+            }
+            mensaje.innerHTML = fib;
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

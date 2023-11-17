@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+       #result{
+           margin-top: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hij">
+            <label for="">ingrese el texto o numeros</label>
+            <input type="text" id="caja" autofocus placeholder="ingrese texto o number">
+            <button onclick="validate()">enviar</button>
+        </div>
+       
+        <div id="result">result:</div>
+    </div>
+    <script>
+        function validate(){
+            let caja = document.getElementById("caja").value;
+            let resultado = document.getElementById("result");
+            let vector= "";
+            if(caja===""){
+                alert("la caja esta vacia");
+
+            }else{
+            if(isNaN(caja)){
+                alert(" es una letra " + caja);
+              for(let i=0; i<caja.length;i++){
+
+                  vector +=caja[i] + "<br>"; 
+              }
+            // var texto = document.getElementById("texto1").value;
+            // var mensaje = document.getElementById("mensaje");
+            // for(let i=0;i<texto.length;i++){
+            //     mensaje.innerHTML += texto[i]+ " "+"<br>";
+            // }
+
+
+
+              resultado.innerHTML = vector;
+            }else{
+                alert("el numero es " + caja);
+            }
+
+        }
+    }
+    </script>
+</body>
+</html>
